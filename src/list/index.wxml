@@ -1,0 +1,15 @@
+<scroll-view
+  scroll-y="{{ scrollY }}"
+  upper-threshold="{{ upperThreshold }}"
+  lower-threshold="{{ lowerThreshold }}"
+  bindscrolltoupper="onRefresh"
+  bindscrolltolower="onLoad"
+>
+    <slot name="upper" />
+    <slot />
+    <view wx:if="{{ loading }}">
+        <slot name="loading" />
+        <view class="loading">{{ loadingText }}</view>
+    </view>
+    <slot name="upper" />
+</scroll-view>
