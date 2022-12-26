@@ -36,10 +36,12 @@ Component({
 
   methods: {
     onLoad() {
-      console.log('加载更多')
+      const name = '加载更多'
+      console.log(name)
     },
     onRefresh() {
-      console.log('下拉刷新')
+      const name = '下拉刷新'
+      console.log(name)
     }
   }
 })

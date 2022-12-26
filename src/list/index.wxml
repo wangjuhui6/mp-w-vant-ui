@@ -4,6 +4,7 @@
   lower-threshold="{{ lowerThreshold }}"
   bindscrolltoupper="onRefresh"
   bindscrolltolower="onLoad"
+  class="w h"
 >
     <slot name="upper" />
     <slot />

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "wv-list": "../../components/list/index"
+  }
+}
