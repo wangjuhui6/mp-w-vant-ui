@@ -95,3 +95,8 @@
 .pl20{padding-left: 20rpx;}
 .pl24{padding-left: 24rpx;}
 /*外边距*/
+/*flex*/
+/*文字位置*/
+.tac{text-align: center;}
+.tal{text-align: left;}
+.tar{text-align: right;}

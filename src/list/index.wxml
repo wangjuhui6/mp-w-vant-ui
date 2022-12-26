@@ -7,14 +7,13 @@
   class="w h"
 >
     <view wx:if="{{ refreshing }}">
-        <view class="refreshing">{{ refreshingText }}</view>
+        <view class="h20 lh tac f24">{{ refreshingText }}</view>
     </view>
     <slot />
     <view wx:if="{{ loading }}">
-        <view class="loading">{{ loadingText }}</view>
+        <view class="h20 lh tac f24">{{ loadingText }}</view>
     </view>
-
     <view wx:if="{{ finished }}">
-        <view class="finished">{{ finishedText }}</view>
+        <view class="h20 lh tac f24">{{ finishedText }}</view>
     </view>
 </scroll-view>
