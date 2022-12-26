@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>list | @wjh666/mp-w-vant-ui</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="小程序ui组件库">
+    
+    <link rel="preload" href="/mp-w-vant-ui/assets/css/0.styles.66e8e513.css" as="style"><link rel="preload" href="/mp-w-vant-ui/assets/js/app.d7566e03.js" as="script"><link rel="preload" href="/mp-w-vant-ui/assets/js/2.849f7496.js" as="script"><link rel="preload" href="/mp-w-vant-ui/assets/js/8.f95ba061.js" as="script"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/3.745d088e.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/4.3dacc505.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/5.37c52e52.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/6.3f84552d.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/7.08793df1.js">
+    <link rel="stylesheet" href="/mp-w-vant-ui/assets/css/0.styles.66e8e513.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mp-w-vant-ui/" class="home-link router-link-active"><!----> <span class="site-name">@wjh666/mp-w-vant-ui</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mp-w-vant-ui/" class="nav-link">
+  mp-w-vant-ui
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mp-w-vant-ui/" class="nav-link">
+  mp-w-vant-ui
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mp-w-vant-ui/" aria-current="page" class="sidebar-link">@wjh666/mp-w-vant-ui</a></li><li><a href="/mp-w-vant-ui/list.html" aria-current="page" class="active sidebar-link">list</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mp-w-vant-ui/list.html#示例" class="sidebar-link">示例</a></li><li class="sidebar-sub-header"><a href="/mp-w-vant-ui/list.html#api" class="sidebar-link">api</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="list"><a href="#list" class="header-anchor">#</a> list</h1> <h2 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h2> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;wv-list&quot;</span><span class="token operator">:</span> <span class="token string">&quot;@wjh666/mp-w-vant-ui/list/index&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">height</span><span class="token punctuation">:</span> 50vh<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>wv-list</span>
+            <span class="token attr-name"><span class="token namespace">model:</span>loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ loading }}<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name"><span class="token namespace">bind:</span>load</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>onLoadData<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name"><span class="token namespace">bind:</span>refresh</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>onRefresh<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">finished</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ finished }}<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span>
+                <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ list }}<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name"><span class="token namespace">wx:</span>for-item</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name"><span class="token namespace">wx:</span>for-index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name"><span class="token namespace">wx:</span>key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span>
+                <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span>
+        <span class="token punctuation">&gt;</span></span>
+            {{ item }}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>wv-list</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">finished</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">list</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token function">onRefresh</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">list</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">finished</span><span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      e<span class="token punctuation">.</span><span class="token function">detail</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">onLoadData</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token function">onLoadData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> that <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token comment">// 加载</span>
+    that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// 模拟加载</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span>list<span class="token punctuation">}</span> <span class="token operator">=</span> that<span class="token punctuation">.</span>data
+      <span class="token keyword">const</span> data <span class="token operator">=</span> list
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        data<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">list</span><span class="token operator">:</span> data<span class="token punctuation">,</span>
+        <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">finished</span><span class="token operator">:</span> data<span class="token punctuation">.</span>length <span class="token operator">&gt;=</span> <span class="token number">30</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>that<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="api"><a href="#api" class="header-anchor">#</a> api</h2> <h3 id="props"><a href="#props" class="header-anchor">#</a> props</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>默认值</th></tr></thead> <tbody><tr><td>scrollY</td> <td>是否纵向滚动</td> <td>Boolean</td> <td>true</td></tr> <tr><td>lowerThreshold</td> <td>距离底部多远触发加载更多</td> <td>Number</td> <td>50</td></tr> <tr><td>loadingText</td> <td>加载文案</td> <td>String</td> <td>加载中</td></tr> <tr><td>finishedText</td> <td>加载结束文案</td> <td>String</td> <td>没有更多了</td></tr> <tr><td>upperThreshold</td> <td>距离头部多少触发下拉</td> <td>Number</td> <td>0</td></tr> <tr><td>loading</td> <td>加载中</td> <td>Boolean</td> <td>false</td></tr> <tr><td>finished</td> <td>没有更多</td> <td>Boolean</td> <td>false</td></tr> <tr><td>refreshing</td> <td>下拉刷新</td> <td>Boolean</td> <td>false</td></tr> <tr><td>refreshingText</td> <td>下拉文案</td> <td>String</td> <td>下拉刷新中</td></tr></tbody></table> <h3 id="event"><a href="#event" class="header-anchor">#</a> event</h3> <table><thead><tr><th>参数</th> <th>说明</th></tr></thead> <tbody><tr><td>load</td> <td>上拉加载更多</td></tr> <tr><td>refresh</td> <td>下拉刷新</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mp-w-vant-ui/" class="prev router-link-active">
+        @wjh666/mp-w-vant-ui
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mp-w-vant-ui/assets/js/app.d7566e03.js" defer></script><script src="/mp-w-vant-ui/assets/js/2.849f7496.js" defer></script><script src="/mp-w-vant-ui/assets/js/8.f95ba061.js" defer></script>
+  </body>
+</html>

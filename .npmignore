@@ -2,6 +2,7 @@
 .DS_Store
 package-lock.json
 
+docs
 logs
 *.log
 npm-debug.log*

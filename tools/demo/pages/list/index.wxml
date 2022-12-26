@@ -1,3 +1,18 @@
-<wv-list>
-    3232
-</wv-list>
+<view style="height: 50vh;">
+    <wv-list
+        model:loading="{{ loading }}"
+        bind:load="onLoadData"
+        bind:refresh="onRefresh"
+        finished="{{ finished }}"
+    >
+        <view
+            wx:for="{{ list }}"
+            wx:for-item="item"
+            wx:for-index="index"
+            wx:key="index"
+            style="height: 50px;"
+        >
+            {{ item }}
+        </view>
+    </wv-list>
+</view>

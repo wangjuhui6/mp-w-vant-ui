@@ -6,11 +6,15 @@
   bindscrolltolower="onLoad"
   class="w h"
 >
-    <slot name="upper" />
+    <view wx:if="{{ refreshing }}">
+        <view class="refreshing">{{ refreshingText }}</view>
+    </view>
     <slot />
     <view wx:if="{{ loading }}">
-        <slot name="loading" />
         <view class="loading">{{ loadingText }}</view>
     </view>
-    <slot name="upper" />
+
+    <view wx:if="{{ finished }}">
+        <view class="finished">{{ finishedText }}</view>
+    </view>
 </scroll-view>
