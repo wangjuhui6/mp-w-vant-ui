@@ -11,7 +11,8 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      '/list'
+      '/list',
+      '/form'
     ]
   }
 }

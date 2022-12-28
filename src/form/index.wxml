@@ -1,0 +1,102 @@
+<van-cell-group>
+    <van-cell
+        wx:for="{{ schema }}"
+        wx:key="index"
+        title="{{ item.label }}"
+    >
+<!--        输入框-->
+        <input
+            wx:if="{{ item.type === 'input' }}"
+            value="{{ data[item.name] }}"
+            placeholder="{{ item.placeholder }}"
+            data-name="{{ item.name }}"
+            bindinput="change"
+        />
+<!--        单选-->
+        <van-radio-group
+            wx:elif="{{ item.type === 'radio' }}"
+            value="{{ data[item.name] }}"
+            data-name="{{ item.name }}"
+            bind:change="change"
+            direction="horizontal"
+        >
+            <van-radio
+                wx:for="{{ item.data }}"
+                wx:for-item="val"
+                wx:for-index="idx"
+                wx:key="idx"
+                name="{{ val.name }}"
+            >
+                {{ val.label }}
+            </van-radio>
+        </van-radio-group>
+<!--        多选-->
+        <van-checkbox-group
+            wx:elif="{{ item.type === 'checkbox' }}"
+            value="{{ data[item.name] }}"
+            data-name="{{ item.name }}"
+            bind:change="change"
+            direction="horizontal"
+        >
+            <van-checkbox
+                wx:for="{{ item.data }}"
+                wx:for-item="val"
+                wx:for-index="idx"
+                wx:key="idx"
+                name="{{ val.name }}"
+            >
+                {{ val.label }}
+            </van-checkbox>
+        </van-checkbox-group>
+    </van-cell>
+            <!--    <view wx:for="{{ schema }}" wx:key="index">-->
+<!--        <van-field-->
+<!--            wx:if="{{ item.type === 'input' }}"-->
+<!--            value="{{ data[item.name] }}"-->
+<!--            label="{{ item.label }}"-->
+<!--            placeholder="{{ item.placeholder }}"-->
+<!--            bind:change="change"-->
+<!--            data-name="{{ item.name }}"-->
+<!--        />-->
+<!--        <van-field-->
+<!--            wx:if="{{ item.type === 'radio' }}"-->
+<!--            value="{{ data[item.name] }}"-->
+<!--            label="{{ item.label }}"-->
+<!--            placeholder="{{ item.placeholder }}"-->
+<!--            bindtap="radioTap"-->
+<!--            data-name="{{ item.name }}"-->
+<!--            data-data="{{ item.data }}"-->
+<!--            readonly-->
+<!--        />-->
+<!--        <van-field-->
+<!--            label="{{ item.label }}"-->
+<!--        >-->
+<!--            <div>323223</div>-->
+<!--        </van-field>-->
+<!--        <van-radio-group-->
+<!--            wx:if="{{ item.type === 'radio' }}"-->
+<!--            value="{{ data[item.name] }}"-->
+<!--            label="{{ item.label }}"-->
+<!--            bind:change="onChange"-->
+<!--            data-name="{{ item.name }}"-->
+<!--        >-->
+<!--            <van-radio-->
+<!--                  wx:for="{{ item.data }}"-->
+<!--                  wx:for-item="val"-->
+<!--                  wx:for-index="idx"-->
+<!--                  wx:key="idx"-->
+<!--                  name="{{ val.label }}"-->
+<!--            >-->
+<!--                {{ val.name }}-->
+<!--            </van-radio>-->
+<!--        </van-radio-group>-->
+<!--        readonly-->
+<!--        <van-field-->
+<!--                value="{{ phone }}"-->
+<!--                label="手机号"-->
+<!--                placeholder="请输入手机号"-->
+<!--                error-message="手机号格式错误"-->
+<!--                border="{{ false }}"-->
+<!--        />-->
+<!--    </view>-->
+</van-cell-group>

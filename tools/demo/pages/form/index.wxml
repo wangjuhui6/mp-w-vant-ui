@@ -1,0 +1,7 @@
+<wv-form
+    id="form"
+    data="{{ data }}"
+    schema="{{ schema }}"
+>
+</wv-form>
+<view bindtap="save">保存</view>
