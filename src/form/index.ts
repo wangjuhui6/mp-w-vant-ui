@@ -28,7 +28,8 @@ Component({
       const {value} = detail
       const {dataset: {name}} = currentTarget
       const {data} = this.data
-      data[name] = value || detail
+      data[name] = value || detail || ''
+      console.log(e, '??')
       this.setData({data})
     },
     onChange(e) {

@@ -1,7 +1,8 @@
 Page({
   data: {
     data: {
-      name: ''
+      name: '',
+      dateOfBirth: '1996'
     },
     schema: [
       {
@@ -12,6 +13,9 @@ Page({
       },
       {
         type: 'checkbox', label: '爱好', name: 'hobby', data: [{label: '敲代码', name: '敲代码'}, {label: '学英语', name: '学英语'}, {label: '玩儿游戏', name: '玩儿游戏'}]
+      },
+      {
+        type: 'date', label: '出生日期', name: 'dateOfBirth'
       }
     ]
   },

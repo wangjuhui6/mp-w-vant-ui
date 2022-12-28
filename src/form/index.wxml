@@ -48,6 +48,16 @@
                 {{ val.label }}
             </van-checkbox>
         </van-checkbox-group>
+<!--        时间-->
+        <input
+            wx:if="{{ item.type === 'date' }}"
+            value="{{ data[item.name] }}"
+            placeholder="{{ item.placeholder }}"
+            data-name="{{ item.name }}"
+            bindinput="change"
+            disabled="readonly"
+            type="text"
+        />
     </van-cell>
             <!--    <view wx:for="{{ schema }}" wx:key="index">-->
 <!--        <van-field-->
