@@ -67,12 +67,16 @@ Component({
           if (optionData[title].length === 0) {
             value.disabled = true
           } else {
-            optionData[title].filter(val =>
-              // eslint-disable-next-line implicit-arrow-linebreak
-              pitch.reduce((a, b) => {
-                console.log(a, b, val)
-                return false
-              }, true))
+            // eslint-disable-next-line no-return-assign
+            optionData[title].filter(val => {
+              const status = pitch.reduce((a, b) => {
+                // !a ? false : val.includes(b)
+                console.log(a, b, val.includes(b))
+                return val.includes(b)
+              }, true)
+              console.log(status)
+              return status
+            })
           }
         })
       })
