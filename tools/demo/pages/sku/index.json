@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "wv-sku": "../../components/sku/index"
+  }
+}

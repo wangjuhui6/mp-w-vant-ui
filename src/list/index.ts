@@ -1,4 +1,6 @@
-Component({
+import {WVComponent} from '../common/component.ts'
+
+WVComponent({
   properties: {
     // 是否滚动
     scrollY: {
@@ -52,6 +54,7 @@ Component({
     }
   },
   data: {
+    name: 1
   },
 
   lifetimes: {

@@ -1,0 +1,5 @@
+@import "../assets/base.wxss";
+/*禁用*/
+.radio-disabled{color: #c8c9cc;}
+/*选中*/
+.radio-check{color: red;}

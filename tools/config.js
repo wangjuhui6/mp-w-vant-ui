@@ -12,7 +12,13 @@ const dev = path.join(demoDist, 'components')
 const dist = path.resolve(__dirname, '../miniprogram_dist')
 
 module.exports = {
-  entry: ['list/index', 'form/index'],
+  entry: [
+    'list/index',
+    'form/index',
+    'sku/index',
+    'radio/index',
+    'radio-group/index'
+  ],
 
   isDev,
   isWatch,
@@ -92,5 +98,5 @@ module.exports = {
     }
   },
 
-  copy: ['./assets', './utils.js'], // 将会复制到目标目录
+  copy: ['./assets', './utils.js', './common'], // 将会复制到目标目录
 }

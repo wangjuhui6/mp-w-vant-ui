@@ -29,16 +29,13 @@ Component({
       const {dataset: {name}} = currentTarget
       const {data} = this.data
       data[name] = value || detail || ''
-      console.log(e, '??')
       this.setData({data})
     },
-    onChange(e) {
-      console.error(e, '??')
+    onChange() {
     },
     // 单选
-    radioTap(e) {
-      const {data, name} = e.currentTarget.dataset
-      console.log(data, name)
+    radioTap() {
+      // const {data, name} = e.currentTarget.dataset
     },
     // 保存
     save() {

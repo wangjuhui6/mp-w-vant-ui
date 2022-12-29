@@ -44,10 +44,12 @@
 .red{color: red;}
 .yellow{color: yellow;}
 .blue{color: blue;}
+.c-555{color: #555555;}
 /*背景颜色*/
 .bg-red{background-color: red;}
 .bg-yellow{background-color: yellow;}
 .bg-blue{background-color: blue;}
+.bg-f4{background-color: #f4f4f4;}
 /*内边距*/
 .p0{padding: 0rpx;}
 .p2{padding: 2rpx;}
@@ -95,6 +97,8 @@
 .pl20{padding-left: 20rpx;}
 .pl24{padding-left: 24rpx;}
 /*外边距*/
+.mb10{margin-bottom: 10px;}
+.mr10{margin-right: 10px;}
 /*flex*/
 /*文字位置*/
 .tac{text-align: center;}

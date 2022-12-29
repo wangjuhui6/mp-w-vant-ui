@@ -1,0 +1,5 @@
+<wv-sku
+    spec="{{ spec }}"
+    goods="{{ goods }}"
+>
+</wv-sku>

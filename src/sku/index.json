@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wv-radio": "../radio/index",
+    "wv-radio-group": "../radio-group/index"
+  }
+}
