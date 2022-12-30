@@ -12,7 +12,8 @@ Component({
   },
   data: {
     pitch: [],
-    optionData: []
+    optionData: [],
+    optionProbablyData: []
   },
 
   lifetimes: {
@@ -53,30 +54,49 @@ Component({
       }))
       // eslint-disable-next-line no-unused-vars
       const pitch = spec.map(val => '')
+      // 有库存的组合
+      const specDatas = []
+      for (const i in specData) {
+        if (specData[i]) {
+          specDatas.push(i)
+        }
+      }
+      // 添加一个''选项
+      const specs = []
+      spec.forEach(val => {
+        specs.push(val.spec.map(val => val.title).concat(['']))
+      })
+      // 列出所有组合
+      const optionProbablyData = specs.reduce((a, b) => a.flatMap(x => b.map(val => [...x, val])), [[]]).map(val => val.join(',')).filter(val => {
+        const c = val.split(',').filter(val => val)
+        return specDatas.reduce((a, b) => {
+          const bData = b.split(',')
+          return a || bData.concat(c.filter(val => !bData.includes(val))).length === bData.length
+        }, false)
+      })
       this.setData({
         pitch,
         optionData,
+        optionProbablyData
       }, () => this.handleOption())
     },
     // 处理选项
     handleOption() {
-      const {spec, optionData, pitch} = this.data
-      spec.forEach(val => {
+      const {
+        spec, optionData, optionProbablyData, pitch
+      } = this.data
+      spec.forEach((val, index) => {
         val.spec.forEach(value => {
           const {title} = value
+          value.disabled = false
           if (optionData[title].length === 0) {
             value.disabled = true
           } else {
-            // eslint-disable-next-line no-return-assign
-            optionData[title].filter(val => {
-              const status = pitch.reduce((a, b) => {
-                // !a ? false : val.includes(b)
-                console.log(a, b, val.includes(b))
-                return val.includes(b)
-              }, true)
-              console.log(status)
-              return status
-            })
+            const newPitch = JSON.parse(JSON.stringify(pitch))
+            newPitch[index] = title
+            if (!optionProbablyData.includes(newPitch.join(','))) {
+              value.disabled = true
+            }
           }
         })
       })
