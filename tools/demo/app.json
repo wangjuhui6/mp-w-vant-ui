@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/list/index",
     "pages/form/index",
     "pages/sku/index"

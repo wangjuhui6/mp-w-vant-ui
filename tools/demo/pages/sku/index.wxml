@@ -1,5 +1,6 @@
 <wv-sku
     spec="{{ spec }}"
     goods="{{ goods }}"
+    pitch="{{ pitch }}"
 >
 </wv-sku>

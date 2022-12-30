@@ -1,3 +1,20 @@
+# sku
+
+## 示例
+```json
+{
+    "wv-sku": "@wjh666/mp-w-vant-ui/sku/index"
+}
+```
+```html
+<wv-sku
+        spec="{{ spec }}"
+        goods="{{ goods }}"
+        pitch="{{ pitch }}"
+>
+</wv-sku>
+```
+```js
 Page({
   data: {
     spec: [
@@ -34,3 +51,21 @@ Page({
     pitch: ['', '', '']
   }
 })
+
+
+```
+
+## api
+
+### props
+|  参数   | 说明  |  类型 | 默认值 |
+|  ----  | ----  |  ----  | ----  |
+| spec  | sku | Array | [] |
+| goods  | 商品库存 | Array | - |
+| pitch  | 选中的数据 | Array | [] |
+
+### event
+|  参数   | 说明  |
+|  ----  | ----  |
+|  change  | 使用默认ui时，每次点完sku的事件，返回值 pitch |
+|  specChange  | sku列表的状态  |

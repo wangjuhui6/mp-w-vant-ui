@@ -8,3 +8,8 @@
 本插件使用微信提供的 miniprogram-custom-component 搭建
 
 文档使用了 vuepress >=1.0.0
+
+暂时没有想到解决文档中预览小程序的问题，可以直接git拉取项目
+安装依赖后运行 npm run dev 或  npm run watch
+然后微信小程序开发者工具打开生成的miniprogram_dev项目
+

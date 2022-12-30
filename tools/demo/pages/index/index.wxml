@@ -1,0 +1,11 @@
+<!--list-->
+<van-cell-group>
+    <van-cell
+        wx:for="{{ list }}"
+        wx:key="index"
+        is-link
+        title="{{ index }}"
+        link-type="navigateTo"
+        url="{{ item }}"
+    />
+</van-cell-group>

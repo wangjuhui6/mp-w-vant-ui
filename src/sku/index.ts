@@ -11,7 +11,8 @@ Component({
     },
     pitch: {
       type: Array,
-      value: []
+      value: [],
+      observer: 'handleOption'
     }
   },
   data: {
@@ -55,8 +56,6 @@ Component({
           }
         }
       }))
-      // eslint-disable-next-line no-unused-vars
-      const pitch = spec.map(val => '')
       // 有库存的组合
       const specDatas = []
       for (const i in specData) {
@@ -78,7 +77,6 @@ Component({
         }, false)
       })
       this.setData({
-        pitch,
         optionData,
         optionProbablyData
       }, () => this.handleOption())
@@ -106,6 +104,7 @@ Component({
       this.setData({
         spec
       })
+      this.triggerEvent('specChange', spec)
     },
     onChange(e) {
       const {detail, currentTarget: {dataset: {index}}} = e
@@ -114,6 +113,7 @@ Component({
       this.setData({
         pitch
       }, () => this.handleOption())
+      this.triggerEvent('change', pitch)
     }
   }
 })
