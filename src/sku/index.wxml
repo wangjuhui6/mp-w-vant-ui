@@ -1,9 +1,9 @@
-<view>
+<view class="wv-sku">
     <view
         wx:for="{{ spec }}"
         wx:key="index"
     >
-        <view>{{ item.title }}</view>
+        <view class="wv-sku__title">{{ item.title }}</view>
         <wv-radio-group
             data-index="{{ index }}"
             value="{{ pitch[index] }}"

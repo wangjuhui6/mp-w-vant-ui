@@ -8,10 +8,13 @@ Component({
     goods: {
       type: Array,
       observer: 'calculation'
+    },
+    pitch: {
+      type: Array,
+      value: []
     }
   },
   data: {
-    pitch: [],
     optionData: [],
     optionProbablyData: []
   },

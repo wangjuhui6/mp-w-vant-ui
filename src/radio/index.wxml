@@ -1,6 +1,6 @@
 <span
     bindtap="onChange"
-    class="h20 lh mb10 mr10 pl10 pr10 bg-f4 f24 {{ (disabled || parentDisabled) ? 'radio-disabled' : '' }} {{ value === name ? 'radio-check' : '' }}"
+    class="dpib h40 lh40 mb10 mr10 pl10 pr10 bg-f4 f24 {{ (disabled || parentDisabled) ? 'radio-disabled' : '' }} {{ value === name ? 'radio-check' : '' }}"
 >
     <slot />
 </span>

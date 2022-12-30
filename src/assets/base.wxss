@@ -39,7 +39,7 @@
 .h400{height: 400rpx;}
 /*行高*/
 .lh{line-height: 1;}
-.lh5{line-height: 0.5;}
+.lh40{line-height: 40rpx;}
 /*颜色*/
 .red{color: red;}
 .yellow{color: yellow;}
@@ -97,10 +97,14 @@
 .pl20{padding-left: 20rpx;}
 .pl24{padding-left: 24rpx;}
 /*外边距*/
-.mb10{margin-bottom: 10px;}
-.mr10{margin-right: 10px;}
+.mt10{margin-top: 10rpx;}
+.mr10{margin-right: 10rpx;}
+.mb10{margin-bottom: 10rpx;}
+.ml10{margin-left: 10rpx;}
 /*flex*/
 /*文字位置*/
 .tac{text-align: center;}
 .tal{text-align: left;}
 .tar{text-align: right;}
+/*inline-block*/
+.dpib{display: inline-block;}
