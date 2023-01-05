@@ -5,7 +5,7 @@
         class="wv-form__item flex flex-col-center"
     >
         <view
-            class="wv-form__label mr20"
+            class="wv-form__label mr20 {{ rules[item.name] && rules[item.name].length && 'is-required' }}"
             style="width: {{ labelWidth }}"
         >
             {{ item.label }}
@@ -51,6 +51,12 @@
                 data-name="{{ item.name }}"
                 bind:change="onChange"
             />
+            <view
+                wx:if="{{ rulesData[item.name] }}"
+                class="wv-form__value__error"
+            >
+                {{ rulesData[item.name] }}
+            </view>
         </view>
     </view>
 </view>

@@ -18,3 +18,8 @@
 .wv-form__label{
     color: #646566;
 }
+.wv-form__value__error{
+    color: #ee0a24;
+    /*font-size: 12px;*/
+    /*text-align: left;*/
+}

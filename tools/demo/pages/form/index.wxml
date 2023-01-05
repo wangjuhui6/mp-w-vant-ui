@@ -2,6 +2,8 @@
     id="form"
     data="{{ data }}"
     schema="{{ schema }}"
+    rules="{{ rules }}"
 >
 </wv-form>
-<view bindtap="save">保存</view>
+<button bindtap="getData">获取数据</button>
+<button bindtap="onSubmit">提交</button>

@@ -25,11 +25,33 @@ Page({
           type: 'date'
         }
       }
-    ]
+    ],
+    rules: {
+      name: [
+        {required: true, message: '请输入姓名'},
+        {pattern: '^[\\u4e00-\\u9fa5]$', message: '只能输入中文'}
+      ],
+      gender: [
+        {required: true, message: '请选择性别'},
+      ],
+      hobby: [
+        {min: 2, message: '爱好至少选两项'},
+      ],
+      dateOfBirth: [
+        {required: true, message: '出生日期不能为空'},
+      ]
+    }
   },
 
-  async save() {
-    const data = await this.selectComponent('#form').save()
-    console.log(data, '获取参数')
+  // 获取数据
+  async getData() {
+    const data = await this.selectComponent('#form').getData()
+    console.log(data, '获取数据')
+  },
+
+  // 保存
+  async onSubmit() {
+    const data = await this.selectComponent('#form').onSubmit()
+    console.log(data, '保存')
   }
 })

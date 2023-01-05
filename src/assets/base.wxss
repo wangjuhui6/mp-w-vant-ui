@@ -116,3 +116,5 @@
 .dpib{display: inline-block;}
 /*禁用*/
 .disabled{color: #c8c9cc!important;}
+/*必填*/
+.is-required:before{content: '*';color: #f56c6c;}
