@@ -1,0 +1,22 @@
+<van-checkbox-group
+    wx:if="{{ !readonly }}"
+    value="{{ value }}"
+    direction="horizontal"
+    disabled="{{ disabled }}"
+    bind:change="change"
+>
+    <van-checkbox
+        wx:for="{{ data }}"
+        wx:key="index"
+        class="mt10 mb10"
+        name="{{ item.name }}"
+    >
+        {{ item.label }}
+    </van-checkbox>
+</van-checkbox-group>
+<wv-input
+    wx:else
+    readonly="{{ true }}"
+    disabled="{{ disabled }}"
+    value="{{ dataUl }}"
+/>

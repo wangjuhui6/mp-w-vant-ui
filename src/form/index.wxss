@@ -1,0 +1,20 @@
+@import "../assets/base.wxss";
+.wv-form{}
+.wv-form__item{
+    position: relative;
+    padding: 20rpx 32rpx;
+}
+.wv-form__item:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 32rpx;
+    right: 32rpx;
+    border-bottom: 1px solid #ebedf0;
+}
+.wv-form__item:last-child:after{
+    display: none;
+}
+.wv-form__label{
+    color: #646566;
+}

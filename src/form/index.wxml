@@ -1,112 +1,56 @@
-<van-cell-group>
-    <van-cell
+<view class="wv-form">
+    <view
         wx:for="{{ schema }}"
         wx:key="index"
-        title="{{ item.label }}"
+        class="wv-form__item flex flex-col-center"
     >
-<!--        输入框-->
-        <input
-            wx:if="{{ item.type === 'input' }}"
-            value="{{ data[item.name] }}"
-            placeholder="{{ item.placeholder }}"
-            data-name="{{ item.name }}"
-            bindinput="change"
-        />
-<!--        单选-->
-        <van-radio-group
-            wx:elif="{{ item.type === 'radio' }}"
-            value="{{ data[item.name] }}"
-            data-name="{{ item.name }}"
-            bind:change="change"
-            direction="horizontal"
+        <view
+            class="wv-form__label mr20"
+            style="width: {{ labelWidth }}"
         >
-            <van-radio
-                wx:for="{{ item.data }}"
-                wx:for-item="val"
-                wx:for-index="idx"
-                wx:key="idx"
-                name="{{ val.name }}"
-            >
-                {{ val.label }}
-            </van-radio>
-        </van-radio-group>
-<!--        多选-->
-        <van-checkbox-group
-            wx:elif="{{ item.type === 'checkbox' }}"
-            value="{{ data[item.name] }}"
-            data-name="{{ item.name }}"
-            bind:change="change"
-            direction="horizontal"
-        >
-            <van-checkbox
-                wx:for="{{ item.data }}"
-                wx:for-item="val"
-                wx:for-index="idx"
-                wx:key="idx"
-                name="{{ val.name }}"
-            >
-                {{ val.label }}
-            </van-checkbox>
-        </van-checkbox-group>
-<!--        时间-->
-        <input
-            wx:if="{{ item.type === 'date' }}"
-            value="{{ data[item.name] }}"
-            placeholder="{{ item.placeholder }}"
-            data-name="{{ item.name }}"
-            bindinput="change"
-            disabled="readonly"
-            type="text"
-        />
-    </van-cell>
-            <!--    <view wx:for="{{ schema }}" wx:key="index">-->
-<!--        <van-field-->
-<!--            wx:if="{{ item.type === 'input' }}"-->
-<!--            value="{{ data[item.name] }}"-->
-<!--            label="{{ item.label }}"-->
-<!--            placeholder="{{ item.placeholder }}"-->
-<!--            bind:change="change"-->
-<!--            data-name="{{ item.name }}"-->
-<!--        />-->
-<!--        <van-field-->
-<!--            wx:if="{{ item.type === 'radio' }}"-->
-<!--            value="{{ data[item.name] }}"-->
-<!--            label="{{ item.label }}"-->
-<!--            placeholder="{{ item.placeholder }}"-->
-<!--            bindtap="radioTap"-->
-<!--            data-name="{{ item.name }}"-->
-<!--            data-data="{{ item.data }}"-->
-<!--            readonly-->
-<!--        />-->
-<!--        <van-field-->
-<!--            label="{{ item.label }}"-->
-<!--        >-->
-<!--            <div>323223</div>-->
-<!--        </van-field>-->
-<!--        <van-radio-group-->
-<!--            wx:if="{{ item.type === 'radio' }}"-->
-<!--            value="{{ data[item.name] }}"-->
-<!--            label="{{ item.label }}"-->
-<!--            bind:change="onChange"-->
-<!--            data-name="{{ item.name }}"-->
-<!--        >-->
-<!--            <van-radio-->
-<!--                  wx:for="{{ item.data }}"-->
-<!--                  wx:for-item="val"-->
-<!--                  wx:for-index="idx"-->
-<!--                  wx:key="idx"-->
-<!--                  name="{{ val.label }}"-->
-<!--            >-->
-<!--                {{ val.name }}-->
-<!--            </van-radio>-->
-<!--        </van-radio-group>-->
-<!--        readonly-->
-<!--        <van-field-->
-<!--                value="{{ phone }}"-->
-<!--                label="手机号"-->
-<!--                placeholder="请输入手机号"-->
-<!--                error-message="手机号格式错误"-->
-<!--                border="{{ false }}"-->
-<!--        />-->
-<!--    </view>-->
-</van-cell-group>
+            {{ item.label }}
+        </view>
+        <view class="wv-form__value flex-1">
+<!--            输入框-->
+            <wv-input
+                wx:if="{{ item.type === 'input' }}"
+                readonly="{{ readonly || item.readonly }}"
+                disabled="{{ disabled || item.disabled }}"
+                value="{{ data[item.name] }}"
+                data-name="{{ item.name }}"
+                bind:change="onChange"
+            />
+<!--            单选-->
+            <wv-form-radio
+                wx:elif="{{ item.type === 'radio' }}"
+                readonly="{{ readonly || item.readonly }}"
+                disabled="{{ disabled || item.disabled }}"
+                value="{{ data[item.name] }}"
+                data-name="{{ item.name }}"
+                data="{{ item.data }}"
+                bind:change="onChange"
+            />
+<!--            多选-->
+            <wv-checkbox
+                wx:elif="{{ item.type === 'checkbox' }}"
+                readonly="{{ readonly || item.readonly }}"
+                disabled="{{ disabled || item.disabled }}"
+                value="{{ data[item.name] }}"
+                data-name="{{ item.name }}"
+                data="{{ item.data }}"
+                bind:change="onChange"
+            />
+<!--            时间-->
+            <wv-datetime-picker
+                wx:elif="{{ item.type === 'datetime' }}"
+                readonly="{{ readonly || item.readonly }}"
+                disabled="{{ disabled || item.disabled }}"
+                value="{{ data[item.name] }}"
+                placeholder="{{ item.placeholder }}"
+                props="{{ item.props }}"
+                data-name="{{ item.name }}"
+                bind:change="onChange"
+            />
+        </view>
+    </view>
+</view>

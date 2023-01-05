@@ -1,0 +1,29 @@
+<view class="datetime-picker">
+    <wv-input
+        readonly="{{ true }}"
+        disabled="{{ disabled }}"
+        value="{{ value }}"
+        placeholder="{{ placeholder }}"
+        bindtap="onClick"
+    />
+    <van-popup
+        show="{{ show }}"
+        position="bottom"
+        round
+        bind:close="onClose"
+    >
+        <van-datetime-picker
+            value="{{ pickerValue }}"
+            title="{{ propsData.title }}"
+            type="{{ propsData.type }}"
+            minDate="{{ propsData.minDate }}"
+            maxDate="{{ propsData.maxDate }}"
+            minHour="{{ propsData.minHour }}"
+            maxHour="{{ propsData.maxHour }}"
+            minMinute="{{ propsData.minMinute }}"
+            maxMinute="{{ propsData.maxMinute }}"
+            bind:confirm="change"
+            bind:cancel="onClose"
+        />
+    </van-popup>
+</view>

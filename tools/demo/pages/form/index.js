@@ -1,8 +1,10 @@
 Page({
   data: {
     data: {
-      name: '',
-      dateOfBirth: '1996'
+      name: '2323',
+      gender: 1,
+      hobby: ['学英语', '玩儿游戏'],
+      dateOfBirth: '1996-12-14'
     },
     schema: [
       {
@@ -15,7 +17,13 @@ Page({
         type: 'checkbox', label: '爱好', name: 'hobby', data: [{label: '敲代码', name: '敲代码'}, {label: '学英语', name: '学英语'}, {label: '玩儿游戏', name: '玩儿游戏'}]
       },
       {
-        type: 'date', label: '出生日期', name: 'dateOfBirth'
+        type: 'datetime',
+        label: '出生日期',
+        name: 'dateOfBirth',
+        placeholder: '请选择出生日期',
+        props: {
+          type: 'date'
+        }
       }
     ]
   },

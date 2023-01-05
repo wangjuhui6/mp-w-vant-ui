@@ -1,0 +1,5 @@
+@import "../assets/base.wxss";
+.wv-input{
+    color: #323233;
+}
+/*.wv-input{}*/

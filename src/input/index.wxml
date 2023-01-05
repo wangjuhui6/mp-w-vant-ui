@@ -1,0 +1,7 @@
+<input
+    class="wv-input {{ disabled ? 'disabled' : '' }}"
+    value="{{ value }}"
+    placeholder="{{ placeholder }}"
+    disabled="{{ disabled || readonly }}"
+    bindinput="change"
+/>

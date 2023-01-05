@@ -1,0 +1,22 @@
+<van-radio-group
+    wx:if="{{ !readonly }}"
+    value="{{ value }}"
+    direction="horizontal"
+    disabled="{{ disabled }}"
+    bind:change="change"
+>
+    <van-radio
+        wx:for="{{ data }}"
+        wx:key="index"
+        name="{{ item.name }}"
+        class="mt10 mb10"
+    >
+        {{ item.label }}
+    </van-radio>
+</van-radio-group>
+<wv-input
+    wx:else
+    readonly="{{ true }}"
+    disabled="{{ disabled }}"
+    value="{{ dataUl[value] }}"
+/>

@@ -2,6 +2,7 @@ Component({
   properties: {
     // model: 对象暂时无效，先抛弃实时更新，
     // 改用提供save方法获取用户输入的值
+    // 数据源
     data: {
       type: Object,
       value: {}
@@ -10,9 +11,19 @@ Component({
       type: Array,
       value: []
     },
+    // 只读
     readonly: {
       type: Boolean,
       value: false
+    },
+    // 禁用
+    disabled: {
+      type: Boolean,
+      value: false
+    },
+    labelWidth: {
+      type: String,
+      value: '200rpx'
     }
   },
   data: {
@@ -23,19 +34,13 @@ Component({
   },
 
   methods: {
-    change(e) {
-      const {detail, currentTarget} = e
-      const {value} = detail
-      const {dataset: {name}} = currentTarget
+    onChange(e) {
+      const {detail, currentTarget: {dataset: {name}}} = e
       const {data} = this.data
-      data[name] = value || detail || ''
-      this.setData({data})
-    },
-    onChange() {
-    },
-    // 单选
-    radioTap() {
-      // const {data, name} = e.currentTarget.dataset
+      data[name] = detail
+      this.setData({
+        data
+      })
     },
     // 保存
     save() {

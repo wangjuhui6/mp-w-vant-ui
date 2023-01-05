@@ -99,12 +99,20 @@
 /*外边距*/
 .mt10{margin-top: 10rpx;}
 .mr10{margin-right: 10rpx;}
+.mr20{margin-right: 20rpx;}
 .mb10{margin-bottom: 10rpx;}
 .ml10{margin-left: 10rpx;}
 /*flex*/
+.flex{display: flex;}
+.flex-1{flex: 1;}
+.flex-2{flex: 2;}
+.flex-row-center{justify-content: center;}
+.flex-col-center{align-items: center;}
 /*文字位置*/
 .tac{text-align: center;}
 .tal{text-align: left;}
 .tar{text-align: right;}
 /*inline-block*/
 .dpib{display: inline-block;}
+/*禁用*/
+.disabled{color: #c8c9cc!important;}
