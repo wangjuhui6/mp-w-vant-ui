@@ -1,3 +1,9 @@
+.slot:empty + .wv-sku{
+    display: block;
+}
+.wv-sku{
+    display: none;
+}
 .wv-sku__title{
     font-size: 30rpx;
     margin-bottom: 10rpx;

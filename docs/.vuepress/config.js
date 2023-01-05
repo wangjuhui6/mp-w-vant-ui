@@ -9,10 +9,13 @@ module.exports = {
         link: "/"
       }
     ],
-    sidebar: [
-      '/',
-      '/list',
-      '/form'
-    ]
+    sidebar: {
+      '/': [
+        '',
+        'list',
+        'form',
+        'sku'
+      ]
+    }
   }
 }
