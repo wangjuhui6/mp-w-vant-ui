@@ -1,0 +1,10 @@
+.scroll-view{
+    width: 100vw;
+    height: 100rpx;
+}
+.scroll-view_box{
+    display: inline-block;
+    width: 100rpx;
+    height: 100rpx;
+    background: red;
+}

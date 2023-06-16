@@ -1,0 +1,12 @@
+function timeYMtoZW (time) {
+  return time.replace(getRegExp('(\d*)-(\d*)', 'g'), '$1年$2月')
+}
+
+function timeYMDtoD (time) {
+  return time.replace(getRegExp('(\d*)-(\d*)-(\d*)', 'g'), '$3')
+}
+
+module.exports = {
+  timeYMtoZW: timeYMtoZW,
+  timeYMDtoD: timeYMDtoD
+}

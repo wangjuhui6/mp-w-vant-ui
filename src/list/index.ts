@@ -54,7 +54,6 @@ WVComponent({
     }
   },
   data: {
-    name: 1
   },
 
   lifetimes: {

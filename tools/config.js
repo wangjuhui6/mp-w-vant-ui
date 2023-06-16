@@ -17,7 +17,8 @@ module.exports = {
     'form/index',
     'sku/index',
     'radio/index',
-    'radio-group/index'
+    'radio-group/index',
+    'scroll-view/index'
   ],
 
   isDev,
@@ -98,5 +99,5 @@ module.exports = {
     }
   },
 
-  copy: ['./assets', './utils.js', './common'], // 将会复制到目标目录
+  copy: ['./assets', './utils.js', './common', './wxs'], // 将会复制到目标目录
 }

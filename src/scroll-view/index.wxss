@@ -1,0 +1,16 @@
+@import "../assets/base.wxss";
+.scroll-view-x {
+    position: relative;
+    white-space: nowrap;
+}
+.scroll-view_zhanwei{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-width: calc(100% + 1rpx);
+    height: 1rpx;
+}
+.scroll-view_item{
+    display: inline-block;
+}

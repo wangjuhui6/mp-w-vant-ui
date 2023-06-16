@@ -1,0 +1,19 @@
+<view class="scroll-view">
+  <wv-scroll-view
+    data="{{ list }}"
+    scrollX="{{ true }}"
+    idName="scrollId"
+    isLocation="{{ true }}"
+    oneLocationBottom="{{ true }}"
+    scrollIntoView="{{ scrollIntoView }}"
+  >
+    <view
+      wx:for="{{ list }}"
+      wx:key="index"
+      slot="slot-{{index}}"
+      class="scroll-view_box"
+    >
+      {{ item.name }}
+    </view>
+  </wv-scroll-view>
+</view>

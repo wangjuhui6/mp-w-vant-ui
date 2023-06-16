@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/list/index",
     "pages/form/index",
-    "pages/sku/index"
+    "pages/sku/index",
+    "pages/map/index",
+    "pages/canvas/index",
+    "pages/scroll-view/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

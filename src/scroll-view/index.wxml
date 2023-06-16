@@ -1,0 +1,28 @@
+<scroll-view
+  scroll-y="{{ scrollY }}"
+  scroll-x="{{ scrollX }}"
+  upper-threshold="{{ upperThreshold }}"
+  lower-threshold="{{ lowerThreshold }}"
+  bindscrolltoupper="onTop"
+  bindscrolltolower="onBottom"
+  enhanced="{{ true }}"
+  show-scrollbar="{{ true }}"
+  scroll-anchoring="{{ true }}"
+  enable-passive="{{ true }}"
+  fast-deceleration="{{ true }}"
+  scroll-with-animation="{{ true }}"
+  class="w h scroll-view {{ scrollX ? 'scroll-view-x': '' }}"
+  scroll-into-view="{{ 	scrollIntoView }}"
+>
+  <view class="scroll-view_zhanwei"></view>
+  <block
+    wx:for="{{ data }}"
+    wx:key="index"
+  >
+    <view id="scroll{{ index }}" class="scroll-view_item"></view>
+    <slot
+      class="111"
+      name="slot-{{index}}"
+    />
+  </block>
+</scroll-view>
