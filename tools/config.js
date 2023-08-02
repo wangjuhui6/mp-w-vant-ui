@@ -99,5 +99,5 @@ module.exports = {
     }
   },
 
-  copy: ['./assets', './utils.js', './common', './wxs'], // 将会复制到目标目录
+  copy: ['./assets', './utils.js', './common', './wxs', './request.js'], // 将会复制到目标目录
 }

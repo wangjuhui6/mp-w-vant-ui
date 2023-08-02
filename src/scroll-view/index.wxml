@@ -21,7 +21,6 @@
   >
     <view id="scroll{{ index }}" class="scroll-view_item"></view>
     <slot
-      class="111"
       name="slot-{{index}}"
     />
   </block>
