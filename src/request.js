@@ -30,6 +30,23 @@ class Request {
       },
       timeout: 60000
     }
+
+    this.requestQueue = []
+  }
+
+  deleteRequestQueue(requestTask) {
+    this.requestQueue.forEach((val, index) => {
+      if (val === requestTask) {
+        this.requestQueue.splice(index, 1)
+      }
+    })
+  }
+
+  abort() {
+    this.requestQueue.forEach((val) => {
+      val.abort()
+    })
+    this.requestQueue = []
   }
 
   request(url = '', method = 'GET', data = {}, config = {}) {
@@ -46,12 +63,13 @@ class Request {
       requestData = this.interceptors.request.handlers.fulfilled(requestData)
     }
     return new Promise((resolve, reject) => {
-      wx.request({
+      const requestTask = wx.request({
         ...requestData,
         success: async (res) => {
+          this.deleteRequestQueue(requestTask)
           if (res.statusCode >= 400 && res.statusCode < 500) {
             if (this.interceptors.request.handlers) {
-              this.interceptors.request.handlers.rejecteds(res)
+              this.interceptors.request.handlers.rejected(res)
             }
             return
           }
@@ -62,6 +80,7 @@ class Request {
           resolve(newRes)
         },
         fail: async (res) => {
+          this.deleteRequestQueue(requestTask)
           let newRes = res
           if (this.interceptors.response.handlers) {
             newRes = await this.interceptors.response.handlers.rejected(newRes)
@@ -69,6 +88,7 @@ class Request {
           reject(newRes)
         }
       })
+      this.requestQueue.push(requestTask)
     })
   }
 

@@ -12,9 +12,19 @@ Page({
   },
 
   async onLoad() {
-    const data = await getYes()
-    console.log(data, '成功')
-    const data1 = await getNo()
-    console.log(data1, '失败')
+    // abort
+    getYes()
+    getYes()
+    getYes()
+    getYes()
+    getYes()
+    getYes()
+    getYes()
+    getYes()
+    getYes()
+    getYes()
+    // console.log(data, '成功')
+    // const data1 = await getNo()
+    // console.log(data1, '失败')
   }
 })
