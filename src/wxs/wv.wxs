@@ -6,7 +6,21 @@ function timeYMDtoD (time) {
   return time.replace(getRegExp('(\d*)-(\d*)-(\d*)', 'g'), '$3')
 }
 
+function scrollTop (data, index) {
+    var style = 'top: '
+    if (data[index]) {
+        style = style + data[index].top + 'px;'
+    }
+    return style
+}
+
+function scrollIf (data, index) {
+    return (data.start <= index) && (index <= data.end)
+}
+
 module.exports = {
   timeYMtoZW: timeYMtoZW,
-  timeYMDtoD: timeYMDtoD
+  timeYMDtoD: timeYMDtoD,
+  scrollTop: scrollTop,
+  scrollIf: scrollIf,
 }

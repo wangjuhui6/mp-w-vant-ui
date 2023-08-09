@@ -1,0 +1,26 @@
+<wxs src="../../components/wxs/wv.wxs" module="wv" />
+
+<view class="scroll">
+  <viwe
+    class="scroll_item scroll_item0"
+    wx-if="{{ wv.scrollIf(SCROLLDATA, 0) }}"
+    style="{{ wv.scrollTop(SCROLLDATAStyle, 0) }}"
+  >
+    头部
+  </viwe>
+  <view
+    wx:for="{{list}}"
+    wx:key="index"
+    wx-if="{{ wv.scrollIf(SCROLLDATA, index + 1) }}"
+    style="{{ wv.scrollTop(SCROLLDATAStyle, index + 1) }}"
+    class="scroll_item_text scroll_item {{ 'scroll_item' + (1 + index) }}"
+  >
+    {{ item.text }}
+  </view>
+  <!-- 占位元素 -->
+  <view
+    class="scroll_perch"
+    style="height: {{ SCROLLDATA.totalHeight }}px;"
+  >
+  </view>
+</view>

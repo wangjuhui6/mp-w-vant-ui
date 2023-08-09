@@ -4,6 +4,7 @@ Page({
   data: {
     src: ''
   },
+
   onLoad() {
     this.widget = this.selectComponent('.widget')
     // 必须要用定时器延迟，不然会报错

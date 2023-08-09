@@ -1,0 +1,19 @@
+.scroll{
+    position: relative;
+}
+.scroll_perch{
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 1px;
+}
+.scroll_item{
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.scroll_item_text{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}

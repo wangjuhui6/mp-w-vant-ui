@@ -14,7 +14,8 @@ module.exports = {
         '',
         'list',
         'form',
-        'sku'
+        'sku',
+        'scroll-view'
       ]
     }
   }
