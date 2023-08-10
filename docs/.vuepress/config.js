@@ -1,5 +1,6 @@
 module.exports = {
   base: "/mp-w-vant-ui/",
+  dest: "../../wangjuhui6.github.io/mp-w-vant-ui",
   title: '@wjh666/mp-w-vant-ui',
   description: '小程序ui组件库',
   themeConfig: {
@@ -16,7 +17,8 @@ module.exports = {
         'form',
         'sku',
         'scroll-view',
-        'request'
+        'request',
+        'WVPage'
       ]
     }
   }
