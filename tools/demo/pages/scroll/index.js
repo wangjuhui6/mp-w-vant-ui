@@ -1,4 +1,4 @@
-import {WVPage} from './wxPage'
+import {WVPage} from '../../components/common/wxPage.js'
 
 WVPage({
   data: {
