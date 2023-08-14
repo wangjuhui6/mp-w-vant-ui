@@ -1,0 +1,15 @@
+<!--list-->
+<wv-goods
+  direction="block"
+  image=""
+  title="商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称"
+  remarks="xxx购买"
+  price="¥100"
+/>
+<wv-goods
+  direction="row"
+  image=""
+  title="商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称"
+  remarks="xxx购买"
+  price="¥100"
+/>

@@ -8,7 +8,9 @@ Page({
       sku: '/pages/sku/index',
       canvas: '/pages/canvas/index',
       'scroll-view': '/pages/scroll-view/index',
-      scroll: '/pages/scroll/index'
+      scroll: '/pages/scroll/index',
+      image: '/pages/image/index',
+      goods: '/pages/goods/index',
     }
   },
 

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "wv-images": "../../components/images/index"
+  }
+}

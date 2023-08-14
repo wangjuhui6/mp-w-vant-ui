@@ -18,7 +18,8 @@ module.exports = {
         'sku',
         'scroll-view',
         'request',
-        'WVPage'
+        'WVPage',
+        'goods'
       ]
     }
   }

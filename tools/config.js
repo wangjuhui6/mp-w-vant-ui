@@ -18,7 +18,9 @@ module.exports = {
     'sku/index',
     'radio/index',
     'radio-group/index',
-    'scroll-view/index'
+    'scroll-view/index',
+    'images/index',
+    'goods/index',
   ],
 
   isDev,

@@ -1,0 +1,4 @@
+<!--list-->
+<view>
+  <wv-images wx:for="{{ data }}" wx:key="index" />
+</view>

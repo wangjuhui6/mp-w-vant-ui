@@ -1,0 +1,10 @@
+<view class="wv-goods {{ direction === 'row' ? 'wv-goods-row' : '' }}">
+  <image src="{{ image }}" />
+  <view class="wv-goods-data">
+    <view>
+      <view class="wv-goods_title">{{ title }}</view>
+      <view class="wv-goods_remarks">{{ remarks }}</view>
+    </view>
+    <view class="wv-goods_price">{{ price }}</view>
+  </view>
+</view>

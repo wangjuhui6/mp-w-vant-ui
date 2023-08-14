@@ -7,7 +7,9 @@
     "pages/map/index",
     "pages/canvas/index",
     "pages/scroll-view/index",
-    "pages/scroll/index"
+    "pages/scroll/index",
+    "pages/image/index",
+    "pages/goods/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
