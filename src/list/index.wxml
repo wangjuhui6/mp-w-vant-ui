@@ -1,14 +1,27 @@
+<!--  bindscrolltoupper="onRefresh"-->
 <scroll-view
   scroll-y="{{ scrollY }}"
   upper-threshold="{{ upperThreshold }}"
   lower-threshold="{{ lowerThreshold }}"
-  bindscrolltoupper="onRefresh"
   bindscrolltolower="onLoad"
   class="w h"
+  enable-passive="{{true}}"
+  refresher-enabled="{{ true }}"
+  refresher-threshold="{{ refresherThreshold }}"
+  refresher-default-style="none"
+  bindrefresherpulling="bindRefReSherPulling"
+  bindrefresherabort="bindRefReSherAbort"
+  bindrefresherrefresh="bindRefReSherRefresh"
+  bindrefresherrestore="bindRefReSherRestore"
+  refresher-background="transparent"
+  refresher-triggered="{{ refreshing }}"
 >
-    <view wx:if="{{ refreshing }}">
-        <view class="h20 lh tac f24">{{ refreshingText }}</view>
-    </view>
+  <view class="vw h20 lh tac f24" slot="refresher">
+    {{ dropDownText }}
+  </view>
+<!--    <view wx:if="{{ refreshing }}">-->
+<!--        <view class="h20 lh tac f24">{{ refreshingText }}</view>-->
+<!--    </view>-->
     <slot />
     <view wx:if="{{ loading }}">
         <view class="h20 lh tac f24">{{ loadingText }}</view>

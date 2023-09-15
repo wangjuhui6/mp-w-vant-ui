@@ -1,0 +1,16 @@
+<!--pages/gif/index.wxml-->
+<view class="gif">
+  <canvas
+    class="gif-canvas"
+    id="canvas"
+    type="2d"
+    wx:if="{{ status && gifStatus }}"
+  >
+  </canvas>
+  <view
+    class="gif-button"
+    bindtap="handleLike"
+  >
+    {{ status ? '取消': '点赞' }}
+  </view>
+</view>

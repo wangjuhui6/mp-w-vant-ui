@@ -6,6 +6,7 @@
 .f20{font-size: 20rpx;}
 .f24{font-size: 24rpx;}
 /*宽*/
+.vw{width: 100vw;}
 .w{width: 100%;}
 .w1{width: 1rpx;}
 .w2{width: 2rpx;}

@@ -11,6 +11,8 @@ Page({
       scroll: '/pages/scroll/index',
       image: '/pages/image/index',
       goods: '/pages/goods/index',
+      shopChart: '/pages/shopChart/index',
+      gif: '/pages/gif/index'
     }
   },
 

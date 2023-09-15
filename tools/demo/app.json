@@ -9,7 +9,9 @@
     "pages/scroll-view/index",
     "pages/scroll/index",
     "pages/image/index",
-    "pages/goods/index"
+    "pages/goods/index",
+    "pages/shopChart/index",
+    "pages/gif/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

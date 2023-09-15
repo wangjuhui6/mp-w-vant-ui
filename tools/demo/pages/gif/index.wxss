@@ -1,0 +1,19 @@
+/* pages/gif/index.wxss */
+.gif{
+    position: relative;
+    width: 200rpx;
+    height: 200rpx;
+}
+.gif-canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.gif-button{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 200rpx;
+}

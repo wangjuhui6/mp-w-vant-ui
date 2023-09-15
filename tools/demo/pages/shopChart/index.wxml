@@ -1,0 +1,44 @@
+<!--pages/shopChart/index.wxml-->
+<wxs module="wv">
+  function isInclude (data, id) {
+    if (data) {
+      return data.indexOf(id) >= 0
+    }
+    return false
+  }
+
+  module.exports = {
+    isInclude: isInclude
+  }
+</wxs>
+<view wx:for="{{ goods }}" wx:key="index">
+  <view>
+    <span wx:if="{{ item.goods.length === activation[1][index].length }}">yes</span>
+    <span bindtap="handleShops" data-id="{{ item.shopId }}" data-index="{{ index }}">门店名称: {{ item.shopId }}</span>
+  </view>
+  <view
+    wx:for="{{ item.goods }}"
+    wx:for-item="value"
+    wx:for-index="idx"
+    wx:key="idx"
+  >
+    <span wx:if="{{ wv.isInclude(activation[1][index], value.id) }}">yes</span>
+    <span bindtap="handleGoods" data-id="{{ value.id }}" data-index="{{ index }}">商品名称{{ value.name }}</span>
+    <span
+      bindtap="handleDeleteGoods"
+      data-id="{{ value.id }}"
+      data-index="{{ index }}"
+    >
+      删除
+    </span>
+  </view>
+</view>
+
+<view>
+  <span
+    wx:if="{{ goods.length > 0 && (goods.length === activation[0].length) }}"
+  >
+    yes
+  </span>
+  全选
+</view>

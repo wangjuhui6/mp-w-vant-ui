@@ -1,6 +1,7 @@
 .idea
 .DS_Store
 package-lock.json
+generate.page.js
 
 logs
 *.log
@@ -8,9 +9,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+
 miniprogram_dist
 miniprogram_dev
 node_modules
+template
 coverage
 
 docs/.vuepress/dist
