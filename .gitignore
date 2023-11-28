@@ -15,6 +15,5 @@ miniprogram_dev
 node_modules
 template
 coverage
-src
 
 docs/.vuepress/dist
